@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap-extra-utilities",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Konrad Podgórski",
+    "url": "http://konradpodgorski.com",
+    "email": "konrad.podgorski@gmail.com"
+  },
+  "keywords": [
+    "bootstrap"
+  ],
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}

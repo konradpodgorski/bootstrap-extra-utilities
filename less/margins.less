@@ -1,0 +1,53 @@
+.mixin-responsive-margin(@class, @margin) {
+  .m-@{class}-a-@{margin} {
+    margin: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-y-@{margin} {
+    margin-top: unit(@margin, px) !important;
+    margin-bottom: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-x-@{margin} {
+    margin-left: unit(@margin, px) !important;
+    margin-right: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-t-@{margin} {
+    margin-top: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-b-@{margin} {
+    margin-bottom: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-l-@{margin} {
+    margin-left: unit(@margin, px) !important;
+  }
+
+  .m-@{class}-r-@{margin} {
+    margin-right: unit(@margin, px) !important;
+  }
+}
+
+.mixin-generate-responsive-margin(@class) {
+  .mixin-responsive-margin(@class, 0);
+  .mixin-responsive-margin(@class, 5);
+  .mixin-responsive-margin(@class, 10);
+  .mixin-responsive-margin(@class, 20);
+  .mixin-responsive-margin(@class, 30);
+}
+
+.mixin-generate-responsive-margin(xs);
+
+@media (min-width: @screen-sm-min) {
+  .mixin-generate-responsive-margin(sm);
+}
+
+@media (min-width: @screen-md-min) {
+  .mixin-generate-responsive-margin(md);
+}
+
+@media (min-width: @screen-lg-min) {
+  .mixin-generate-responsive-margin(lg);
+}

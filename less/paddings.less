@@ -1,0 +1,54 @@
+
+.mixin-responsive-padding(@class, @padding) {
+  .p-@{class}-a-@{padding} {
+    padding: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-y-@{padding} {
+    padding-top: unit(@padding, px) !important;
+    padding-bottom: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-x-@{padding} {
+    padding-left: unit(@padding, px) !important;
+    padding-right: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-t-@{padding} {
+    padding-top: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-b-@{padding} {
+    padding-bottom: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-l-@{padding} {
+    padding-left: unit(@padding, px) !important;
+  }
+
+  .p-@{class}-r-@{padding} {
+    padding-right: unit(@padding, px) !important;
+  }
+}
+
+.mixin-generate-responsive-padding(@class) {
+  .mixin-responsive-padding(@class, 0);
+  .mixin-responsive-padding(@class, 5);
+  .mixin-responsive-padding(@class, 10);
+  .mixin-responsive-padding(@class, 20);
+  .mixin-responsive-padding(@class, 30);
+}
+
+.mixin-generate-responsive-padding(xs);
+
+@media (min-width: @screen-sm-min) {
+  .mixin-generate-responsive-padding(sm);
+}
+
+@media (min-width: @screen-md-min) {
+  .mixin-generate-responsive-padding(md);
+}
+
+@media (min-width: @screen-lg-min) {
+  .mixin-generate-responsive-padding(lg);
+}
